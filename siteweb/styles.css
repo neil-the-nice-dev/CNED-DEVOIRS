@@ -444,3 +444,27 @@ h2 {
         grid-template-columns: 1fr;
     }
 }
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-image {
+    width: 100%;
+    height: 450px; /* Hauteur ajustée */
+    position: relative;
+    overflow: hidden;
+    background: #1a1a2e;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Changed to 'cover' to fill the container */
+    object-position: center; /* Centre l'image */
+}
