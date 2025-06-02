@@ -2,15 +2,8 @@ from random import randint
 
 def ajoute_dictionnaires(d1, d2):
     d = {}
-    for k in d1:
-        if k in d2 :
-            d[k] = d1[k] + d2[k]
-        else :
-            d[k] = d1[k]
-    for k in d2:
-        if k not in d:
-            d[k] = d2[k]
-    return d        
+    for k, v in d1.items():
+        print(k, v )
             
 
 from random import randint
@@ -39,4 +32,4 @@ def nombre_coups():
         
     
 if __name__ == '__main__':
-        print(ajoute_dictionnaires({}, {2: 9, 3: 11}))
+        print(ajoute_dictionnaires({1: 5, 2: 7}, {2: 9, 3: 11}))
