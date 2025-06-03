@@ -21,12 +21,25 @@ def eleves_du_mois(eleves, notes):
             meilleurs_eleves = [eleves[i]]
     return (note_maxi, meilleurs_eleves)
 
+def dicho(x, tab):
+    debut = 0
+    fin = len(tab)
+    while fin > debut :
+        m = debut+ (fin-debut)//2
+        if tab[m ] < x:
+            debut = m + 1
+        else : 
+            fin = m
+    return m            
 
-
+def bin(n):
+    if n == 0 or n == 1:
+        return str(n)
+    return bin(n//2)+str(n%2)
 
 if __name__ == '__main__':
-    eleves_nsi = ['a','b','c','d','e','f','g','h','i','j']
-    notes_nsi = [30, 40, 80, 60, 58, 80, 75, 80, 60, 24]
     
-    print(eleves_du_mois(eleves_nsi, notes_nsi))
-    print(fibonacci(7))
+    print(dicho(10, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+    
+    
+    
